@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>스마트팜</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="container">
+                <button type="button" class="btn-back">
+                    <i class="ico i-arrow-left"></i>
+                </button>
+                <h2>CCTV</h2>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="error-msg">
+                    <img src="img/ico/i-warning.svg" alt="">
+                    <p>오류메세지입니다. 오류메세지입니다. 오류메세지입니다. 오류메세지입니다. </p>
+                </div>
+                <div class="item-wrap">
+                    <h2>CCTV</h2>
+                    <div class="search-wrap">
+                        <div class="date-group">
+                            <div class="date-area">
+                                <input type="date">
+                            </div>
+                            <div class="date-area">
+                                <input type="time">
+                            </div>
+                        </div>
+                        <div class="date-group">
+                            <div class="date-area">
+                                <input type="date">
+                            </div>
+                            <div class="date-area">
+                                <input type="time">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-md btn-primary">조회</button>
+                    </div>
+                </div>
+                <ul class="main-item-wrap">
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="img/ico/main-icon-06.svg" alt="CCTV">
+                            </dt>
+                            <dd>
+                                <div class="item-text center">
+                                    <h2>A동</h2>
+                                    <button type="button" class="btn btn-md btn-primary">확인</button>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="img/ico/main-icon-06.svg" alt="CCTV">
+                            </dt>
+                            <dd>
+                                <div class="item-text center">
+                                    <h2>B동</h2>
+                                    <button type="button" class="btn btn-md btn-primary open-modal"
+                                        data-modal-id="cctvModal">확인</button>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- S : cctvModal :: CCTV-->
+    <div id="cctvModal" class="modal-wrap active">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">A동</h3>
+                    <button type="button" class="btn-modal-close">
+                        <i class="ico i-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="cctv-wrap">
+                        <!-- cctv 높이 가로값 변경요청주세요.-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E : cctvModal -->
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

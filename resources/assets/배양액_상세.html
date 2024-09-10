@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>스마트팜</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="container">
+                <button type="button" class="btn-back">
+                    <i class="ico i-arrow-left"></i>
+                </button>
+                <h2>배양액</h2>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="error-msg">
+                    <img src="img/ico/i-warning.svg" alt="">
+                    <p>오류메세지입니다. 오류메세지입니다. 오류메세지입니다. 오류메세지입니다. </p>
+                </div>
+                <div class="chart-wrap">
+                    <canvas id="dataChart" width="400" height="200"></canvas>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-md btn-gray primary active">배양액 A</button>
+                        <button type="button" class="btn btn-md btn-gray red active">배양액 B</button>
+                        <button type="button" class="btn btn-md btn-gray gray active">배양액 C</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Step 2: Define the chart data and configuration
+        const ctx = document.getElementById('dataChart').getContext('2d');
+        const dataChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2', '4', '6', '8', '10', '12', '14', '16', '18', '20', '22', '24'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [65, 59, 80, 81, 56, 55, 40, 59, 80, 81, 56, 55, 40],
+                    fill: false,
+                    borderColor: '#005629',
+                    tension: 0.4
+                },
+                {
+                    label: 'Dataset 2',
+                    data: [28, 48, 40, 19, 86, 27, 90, 48, 40, 19, 86, 27, 90],
+                    fill: false,
+                    borderColor: '#CE1B2B',
+                    tension: 0.4
+                },
+                {
+                    label: 'Dataset 3',
+                    data: [60, 48, 40, 19, 86, 27, 70, 48, 40, 19, 86, 27, 90],
+                    fill: false,
+                    borderColor: '#A3A3A3',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
