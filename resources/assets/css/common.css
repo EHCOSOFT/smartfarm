@@ -279,6 +279,13 @@ h2 {
     line-height: 24px;
 }
 
+.header a {
+    color: var(--shark-60);
+    font-size: 13px;
+    position: absolute;
+    right: 20px;
+}
+
 .wrap {
     display: flex;
     flex-direction: column;
